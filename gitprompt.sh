@@ -24,12 +24,16 @@ function git_prompt_dir()
 
 function git_prompt_config()
 {
+  # PROMPT_START="\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\]"
+  # PROMPT_END=" \[\e[1;31m\]\$ \[\e[m\]\[\e[0;37m\]"
+  
   # Colors
   ResetColor="\[\033[0m\]"            # Text reset
 
   # Bold
   local BoldGreen="\[\033[1;32m\]"    # Green
   local BoldBlue="\[\033[1;34m\]"     # Blue
+  local BoldCyan="\[\e[1;36m\]"       # Cyan
 
   # High Intensty
   local IntenseBlack="\[\033[0;90m\]" # Grey
@@ -86,13 +90,16 @@ function git_prompt_config()
   local PathShort="\w"
 
   if [ "x${GIT_PROMPT_START}" == "x" ]; then
-    PROMPT_START="${Yellow}${PathShort}${ResetColor}"
+    # original prompt
+    # PROMPT_START="${Yellow}${PathShort}${ResetColor}"
+    # archlinux prompt
+    PROMPT_START="${Cyan}\u\[\e[m\]: ${BoldCyan}\w\[\e[m\]"
   else
     PROMPT_START="${GIT_PROMPT_START}"
   fi
 
   if [ "x${GIT_PROMPT_END}" == "x" ]; then
-    PROMPT_END=" \n${White}${Time12a}${ResetColor} $ "
+    PROMPT_END=" ${Cyan}\$ \[\e[m\]\[\e[0;37m\]"
   else
     PROMPT_END="${GIT_PROMPT_END}"
   fi
