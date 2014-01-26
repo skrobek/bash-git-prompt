@@ -26,7 +26,7 @@ function git_prompt_config()
 {
   # PROMPT_START="\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\]"
   # PROMPT_END=" \[\e[1;31m\]\$ \[\e[m\]\[\e[0;37m\]"
-  
+
   # Colors
   ResetColor="\[\033[0m\]"            # Text reset
 
@@ -93,7 +93,7 @@ function git_prompt_config()
     # original prompt
     # PROMPT_START="${Yellow}${PathShort}${ResetColor}"
     # archlinux prompt
-    PROMPT_START="${Cyan}\u\[\e[m\]: ${BoldCyan}\w\[\e[m\]"
+    PROMPT_START="${Cyan}\u\[\e[m\]:${BoldCyan}\w\[\e[m\]"
   else
     PROMPT_START="${GIT_PROMPT_START}"
   fi
