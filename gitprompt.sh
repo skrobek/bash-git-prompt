@@ -31,21 +31,21 @@ function git_prompt_config()
   ResetColor="\[\033[0m\]"            # Text reset
 
   # Bold
-  local BoldGreen="\[\033[1;32m\]"    # Green
-  local BoldBlue="\[\033[1;34m\]"     # Blue
-  local BoldCyan="\[\e[1;36m\]"       # Cyan
+  local BoldGreen="\[\033[0;32m\]"    # Green
+  local BoldBlue="\[\033[0;33m\]"     # Blue
+  local BoldCyan="\[\e[0;36m\]"       # Cyan
 
   # High Intensty
   local IntenseBlack="\[\033[0;90m\]" # Grey
 
   # Bold High Intensty
-  local Magenta="\[\033[1;95m\]"      # Purple
+  local Magenta="\[\033[0;95m\]"      # Purple
 
   # Regular Colors
   local Yellow="\[\033[0;33m\]"
   local White='\[\033[37m\]'
   local Red="\[\033[0;31m\]"
-  local Blue="\[\033[0;34m\]"
+  local Blue="\[\033[0;33m\]"
   local Cyan="\[\033[0;36m\]"
 
   # source the user's ~/.git-prompt-colors.sh file, or the one that should be
